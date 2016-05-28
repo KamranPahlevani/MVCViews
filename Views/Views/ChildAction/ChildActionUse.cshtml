@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "ChildActionUse";
+}
+
+<h2>ChildActionUse</h2>
+<p>This method is rendered by action method</p>
+@Html.Action("ChildAction", new {time = DateTime.Now })
+<p>This method is rendered by action method again</p>
+

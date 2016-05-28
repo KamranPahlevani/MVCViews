@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "PartialViewUse";
+}
+
+<h2>PartialViewUse</h2>
+<p>This is method created by action method</p>
+@Html.Partial("MyPartial", new string[]{"Apples","Mangoes","Oranges"})
+<p>This is method created by action method again</p>
