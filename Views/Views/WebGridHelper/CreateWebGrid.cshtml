@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "CreateWebGrid";
+}
+
+<header>
+    <link href="@Url.Content("~/Content/gridStyle.css")" rel="stylesheet" type="text/css" />
+</header>
+
+<h2>CreateWebGrid</h2>
+
+@{
+    var grid = (WebGrid)ViewBag.WebGrid;
+}
+
+@grid.GetHtml(
+                tableStyle: "Grid",
+                headerStyle: "HeadingCell",
+                rowStyle: "Row",
+                footerStyle: "GridFooter",
+                alternatingRowStyle: "AlternatingRow ",
+                fillEmptyRows:true,
+                columns: grid.Columns(
+                                        grid.Column("Name", "item", style: "TextCol"),
+                                        grid.Column("Price", style: "NumberCol", format: @<text>$@string.Format("{0:F2}", item.Price)</text>)
+                )
+)
+

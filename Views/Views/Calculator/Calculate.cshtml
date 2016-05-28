@@ -1,0 +1,11 @@
+﻿@inherits Views.Models.ViewClasses.CalculatorView
+@{
+    ViewBag.Title = "Calculate";
+}
+
+<h2>Calculate</h2>
+@{
+   int x = @ViewBag.X;
+   int y = @ViewBag.Y;
+   <p>the calculate result for @x and @y is @Calculator.Sum(x,y)</p>
+}

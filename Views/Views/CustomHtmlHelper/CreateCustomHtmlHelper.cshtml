@@ -1,0 +1,18 @@
+﻿@using Views.Infrastructure.CustomHtmlHelpers;
+@{
+    ViewBag.Title = "CreateCustomHtmlHelper";
+}
+
+<h2>CreateCustomHtmlHelper</h2>
+
+@{
+    <p>Days of the week:</p>
+    string[] Days = ViewBag.Days;
+    <p>@Html.List(Days)</p>   
+    <p>Fruits:</p>
+    string[] Fruits = ViewBag.Fruits;
+    <p>@Html.List(Fruits)</p>
+}
+
+
+

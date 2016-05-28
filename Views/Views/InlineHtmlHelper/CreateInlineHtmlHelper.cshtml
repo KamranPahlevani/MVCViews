@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "CreateInlineHtmlHelper";
+}
+
+@helper CreateList(string[] items)
+{
+    <ul>
+        @foreach (string item in items)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+
+<h2>CreateInlineHtmlHelper</h2>
+
+<p>Days of the week:</p>
+<p>@CreateList(ViewBag.Days)</p>   
+<p>Fruits:</p>
+<p>@CreateList(ViewBag.Fruits)</p>
